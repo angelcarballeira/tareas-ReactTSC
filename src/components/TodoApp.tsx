@@ -8,7 +8,10 @@ export const TodoApp = () => {
   const [taskList, setTaskList] = useState<string[]>([])
 
   const handleDeleteTask = (index: number) => {
-    setTaskList(tasks => tasks.filter((task, i) => i !== index))
+    setTaskList(tasks => tasks.filter((task, i) => {
+      console.log(task);
+      return i !== index}))
+    
   }
 
   const handleAddTask = () => {
